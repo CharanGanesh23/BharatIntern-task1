@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.debug = True
 app.config['SECRET_KEY'] = 'secret_key'
 app.config['SESSION_TYPE'] = 'filesystem'
-Session(app)
+Session(app) 
 socketio = SocketIO(app, manage_session=False)
 @app.route('/', methods=['GET', 'POST'])
 def index():
